@@ -27,7 +27,7 @@ const cache = new InMemoryCache({
 })
 
 const client = new ApolloClient({
-  uri: '/graphql',
+  uri: 'https://proj-mgmt-system.herokuapp.com/graphql',
   cache
 })
 
