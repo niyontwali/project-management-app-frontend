@@ -15,9 +15,6 @@ const EditProjectForm = ({ project }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    if( !name || !description || !status ) {
-      return alert('Please fill out all fields')
-    }
     updateProject(name, description, status)
   }
   return (
