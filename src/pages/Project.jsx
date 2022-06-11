@@ -4,6 +4,7 @@ import { GET_PROJECT  } from '../queries/projectQueries';
 import ClientInfo from '../components/ClientInfo';
 import DeleteProjectButton from '../components/DeleteProjectButton';
 import EditProjectForm from '../components/EditProjectForm';
+import Spinner from '../components/Spinner'
 
 
 const Project = () => {
@@ -12,7 +13,7 @@ const Project = () => {
     variables: { id }
   });
 
-  if (loading) return <div>Loading.....</div>
+  if (loading) return <div className='spinner-styles'><Spinner /></div>
   if (error) return <p>Something went wrong</p>
 
   return (
@@ -20,7 +21,7 @@ const Project = () => {
       {
         !loading && !error && (
           <div className='mx-auto w-75 card p-5'>
-            <Link to="/" className='btn btn-secondary btn-sm w-25 d-inline ms-auto'>Back</Link>
+            <Link to="/" className='btn btn-secondary btn-sm w-5 px-4 d-inline ms-auto'>Back</Link>
             <h1>{ data.project.name }</h1>
             <p>{ data.project.decription }</p>
             <h5 className='mt-3'>Project Status</h5>

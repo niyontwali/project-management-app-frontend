@@ -36,7 +36,7 @@ const EditProjectForm = ({ project }) => {
           <option value="completed">Completed</option>
         </select>
       </div>
-      <button type='submit' className="btn btn-primary">Submit</button>
+      <button type='submit' className="btn btn-primary">Update</button>
       </form>
 
     </div>

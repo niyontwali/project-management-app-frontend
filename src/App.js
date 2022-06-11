@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import Home from './pages/Home';
 import NotFound from './pages/404';
 import Project from './pages/Project';
+import ButtonSchema from './skeleton/ButtonSchema';
 
 const cache = new InMemoryCache({
   typePolicies: {
@@ -40,6 +41,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects/:id" element={<Project />} />
+          <Route path="/test" element={<ButtonSchema />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>

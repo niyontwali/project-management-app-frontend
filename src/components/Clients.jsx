@@ -2,12 +2,13 @@ import { useQuery } from '@apollo/client';
 
 import ClientRow from './ClientRow'
 import { GET_CLIENTS } from '../queries/clientQueries';
+import TableSchema from '../skeleton/TableSchema';
 
 
 const Clients = () => {
   const { loading, error, data } = useQuery(GET_CLIENTS)
 
-  if (loading) return <p> Loading ....</p>
+  if (loading) return <TableSchema />
   if (error) return <p>SOmething Went Wrong</p>
 
   return (

@@ -1,6 +1,7 @@
 import { useQuery } from "@apollo/client";
 
 import { GET_PROJECTS } from "../queries/projectQueries";
+import CardSchema from "../skeleton/CardSchema";
 import ProjectCard from "./ProjectCard";
 
 
@@ -8,7 +9,7 @@ import ProjectCard from "./ProjectCard";
 const Projects = () => {
   const { loading, error, data } = useQuery(GET_PROJECTS);
 
-  if (loading) return <div>Loading....</div>
+  if (loading) return <div className="schema-card"><CardSchema /><CardSchema /><CardSchema /></div>
   if (error) return <p>Something went wrong</p>
   return (
     <>

@@ -4,6 +4,7 @@ import { useMutation, useQuery } from '@apollo/client'
 import { ADD_PROJECT } from '../mutations/projectMutations';
 import { GET_CLIENTS } from '../queries/clientQueries'
 import { GET_PROJECTS } from '../queries/projectQueries';
+import ButtonSchema from '../skeleton/ButtonSchema';
 
 
 const AddProjectModal = () => {
@@ -39,7 +40,7 @@ const AddProjectModal = () => {
     setStatus('new')
   }
 
-  if (loading) return null
+  if (loading) return <ButtonSchema />
   if (error) return <p>Something went wrong</p>
 
   return (
