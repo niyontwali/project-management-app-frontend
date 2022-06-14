@@ -87,7 +87,7 @@ const AddProjectModal = () => {
                   </div>
                   <div className="modal-footer">
                     <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" className="btn btn-primary" data-bs-dismiss="modal">Add Client</button>
+                    <button type="submit" className="btn btn-primary" data-bs-dismiss="modal">Add Project</button>
                   </div>
                 </form>
               </div>
